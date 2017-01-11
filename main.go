@@ -5,7 +5,7 @@ import (
 )
 
 func pageHandler(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Cyrus Vattes Homepage"))
+	w.Write([]byte("Hello World!"))
 }
 
 func main() {
