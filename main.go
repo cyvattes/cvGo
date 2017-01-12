@@ -1,14 +1,27 @@
 package main
 
 import (
+	"html/template"
 	"net/http"
+	"path/filepath"
 )
 
-func pageHandler(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Hello World!"))
+func main() {
+	http.HandleFunc("/", viewHandler)
+	http.ListenAndServe(":8080", nil)
 }
 
-func main() {
-	http.HandleFunc("/", pageHandler)
-	http.ListenAndServe(":8080", nil)
+func viewHandler(w http.ResponseWriter, r *http.Request) {
+	tmplPath := "templates"
+	tmpl := "index.html"
+	t := filepath.Join(tmplPath, tmpl)
+	renderTemplate(w, t)
+}
+
+func renderTemplate(w http.ResponseWriter, t string) {
+	var templates = template.Must(template.ParseFiles(t))
+	err := templates.ExecuteTemplate(w, t, nil)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
 }
