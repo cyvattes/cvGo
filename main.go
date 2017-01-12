@@ -15,12 +15,12 @@ func viewHandler(w http.ResponseWriter, r *http.Request) {
 	tmplPath := "templates"
 	tmpl := "index.html"
 	t := filepath.Join(tmplPath, tmpl)
-	renderTemplate(w, t)
+	renderTemplate(w, t, tmpl)
 }
 
-func renderTemplate(w http.ResponseWriter, t string) {
+func renderTemplate(w http.ResponseWriter, t string, tmpl string) {
 	var templates = template.Must(template.ParseFiles(t))
-	err := templates.ExecuteTemplate(w, t, nil)
+	err := templates.ExecuteTemplate(w, tmpl, nil)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
