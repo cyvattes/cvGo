@@ -7,11 +7,12 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/", viewHandler)
+	http.HandleFunc("/", indexHandler)
+	http.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("public"))))
 	http.ListenAndServe(":8080", nil)
 }
 
-func viewHandler(w http.ResponseWriter, r *http.Request) {
+func indexHandler(w http.ResponseWriter, r *http.Request) {
 	tmplPath := "templates"
 	tmpl := "index.html"
 	t := filepath.Join(tmplPath, tmpl)
