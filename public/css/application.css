@@ -1,4 +1,48 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 body {
     background-color: #16161d;
     color: #d3d3de;
+}
+
+a {
+    color: #7c7c9c;
+}
+
+li {
+        float: none;
+        display: inline-block;
+}
+
+.navbar {
+    margin-bottom: 5px;
+}
+
+.nav-tabs {
+    border-style: none;
+}
+
+.nav-tabs li.active a,
+.nav-tabs li.active a:hover,
+.nav-tabs li.active a:focus,
+.nav-tabs li a:hover,
+.nav-tabs li a:focus {
+        background-color: #16161d;
+        color: #d3d3de;
+        border: 1px solid transparent;
+        border-bottom: 1px solid #d3d3de;
+}
+
+.container {
+    text-align: center;
+}
+
+.left-facing {
+    text-align: left;
+}
+
+#project {
+    width: 29%;
+    display: inline-block;
 }
