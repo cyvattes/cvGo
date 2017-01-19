@@ -1,0 +1,6 @@
+{
+	"ImportPath": "github.com/cyvattes/cvGo",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v77",
+	"Deps": []
+}
