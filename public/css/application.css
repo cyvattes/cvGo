@@ -1,34 +1,32 @@
-body {
-    background-color: #16161d;
-    color: #d3d3de;
-}
-
-a {
-    color: #7c7c9c;
-}
-
-.callout.primary div {
-    background-color: #21212c;
-    color: #d3d3de;
-}
-
-.callout.primary {
-    background-color: #21212c;
-    color: #d3d3de;
-}
-
+body,
+a:hover,
+a:focus,
+.off-canvas,
 .column {
     background-color: #16161d;
     color: #d3d3de;
     text-align: center;
 }
 
-.off-canvas {
-    background-color: #16161d;
+.callout.primary,
+.callout.primary div {
+    background-color: #21212c;
+    color: #d3d3de;
 }
 
-a:hover,
-a:focus {
-    background-color: #16161d;
-    color: #d3d3de;
+.menu-icon {
+    width: 1.5rem;
+    height: 1rem;
+}
+
+a {
+    color: #7c7c9c;
+}
+
+i {
+    margin-bottom: 1rem;
+}
+
+p {
+    margin: 0;
 }
