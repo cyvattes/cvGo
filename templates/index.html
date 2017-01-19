@@ -1,12 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cyrus Vattes</title>
+    <link rel="stylesheet" href="../public/css/foundation.min.css">
+    <link rel="stylesheet" href="../public/css/font-awesome.min.css">
     <link rel="stylesheet" href="../public/css/application.css">
   </head>
-  
   <body>
-    <p>Home</p>
+    
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+        <div class="off-canvas position-left reveal-for-large" id="my-info" data-off-canvas data-position="left">
+          <div class="row column">
+            <br>
+            <img class="thumbnail" src="../public/img/Cyrus.jpg">
+            <h5>Cyrus Vattes</h5>
+            <p>Software Developer</p>
+            <p>Bay Area, CA</p>
+          </div>
+        </div>
+
+        <div class="off-canvas-content" data-off-canvas-content>
+          <div class="title-bar hide-for-large">
+            <div class="title-bar-left">
+              <button class="menu-icon" type="button" data-open="my-info"></button>
+              <span class="title-bar-title"></span>
+            </div>
+          </div>
+          <div class="callout primary">
+            <div class="row column">  
+              <h2>Cyrus Vattes</h2>
+              <p class="lead">
+                I am a software developer in the bay area with a passion for robotics, fencing, wine, and writing (note that fancy Oxford Comma). My mission is to bring some art and creativity to the world of backend computing. Below, you can find some of my most exciting projects and coding contributions.
+              </p>
+            </div>
+          </div>
+          <div class="row small-up-2 medium-up-3 large-up-4">
+            <!--ROW 1-->
+            <div class="column">
+              <h5>Last Stop</h5>
+              <a href="https://last-stop.info">
+                <i class="fa fa-bus fa-5x" aria-hidden="true"></i>
+              </a>
+              <p>
+                Find the final departure time of bus/train stops around San Francisco.
+              </p>
+            </div>
+            <div class="column">
+              <h5>mongoSetup</h5>
+              <a href="https://rubygems.org/gems/mongoSetup/versions/0.1.0">
+                <i class="fa fa-diamond fa-5x" aria-hidden="true"></i>
+              </a>
+              <p>
+                Set up dependencies for mongoDB with this easy-to-use Ruby gem.
+              </p>
+            </div>
+            <div class="column">
+              <h5>Tabula</h5>
+              <a href="#">
+                <i class="fa fa-pencil-square-o fa-5x" aria-hidden="true"></i>
+              </a>
+              <p>
+                Study written works for patterns, then generate unique prose.
+              </p>
+            </div>
+            <!--ROW 2-->
+            <div class="column" style="height:100px">
+            </div>
+            <div class="column" style="height:100px">
+            </div>
+            <div class="column" style="height:100px">
+            </div>
+            <!--ROW 3-->
+            <div class="column" style="height:100px">
+            </div>
+            <div class="column" style="height:100px">
+            </div>
+            <div class="column" style="height:100px">
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="row">
+            <div class="column medium-4 medium-offset-4">
+              <h3>Find Me Online!</h3>
+              <a href="https://www.linkedin.com/in/cyrus-vattes-20189a62">
+                <i class="fa fa-linkedin-square fa-5x" aria-hidden="true"></i>
+              </a>
+              <a href="https://github.com/cyvattes">
+                <i class="fa fa-github-square fa-5x" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="../public/scripts/jquery.js"></script>
+    <script src="../public/scripts/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
   </body>
 </html>
