@@ -2,14 +2,22 @@ package main
 
 import (
 	"html/template"
+	"log"
 	"net/http"
+	"os"
 	"path/filepath"
 )
 
 func main() {
+	port := os.Getenv("PORT")
+	if port == "" {
+		log.Fatal("$PORT must be set")
+	}
+
 	http.HandleFunc("/", indexHandler)
 	http.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("public"))))
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":"+port, nil)
+	// http.ListenAndServe(":8080", nil)
 }
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
